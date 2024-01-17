@@ -10,140 +10,88 @@
   <title>Frontend Mentor | Rock, Paper, Scissors</title>
 </head>
 <body>
-  <div id="rules-overlay">
-    <div id="rules-container">
-      <div id="rules-heading-close-button">
-        <div id="rules-heading">RULES</div>
-        <button id="close-rules-button">X</button>
+<main>
+  <section>
+    <div id="rules-overlay">
+      <div id="rules-container">
+        <div id="rules-heading-close-button">
+          <div id="rules-heading">RULES</div>
+          <button id="close-rules-button">X</button>
+        </div>
+        <div id="rules-image" style="margin-left:auto;margin-right:auto;">
+          <img src="./images/image-rules-bonus.svg" id="rules-img" alt="">
+        </div>
       </div>
-      <div id="rules-image" style="margin-left:auto;margin-right:auto;">
-        <img src="./images/image-rules-bonus.svg" id="rules-img" alt="">
+    </div>
+    <h1 style="display:none;">Rock paper scissors game</h1>
+    <div class="title-with-scoreboard">
+      <div class="game-names">
+        <div class="game-title">ROCK</div>
+        <div class="game-title">PAPER</div>
+        <div class="game-title">SCISSORS</div>
+        <div class="game-title">LIZARD</div>
+        <div class="game-title">SPOCK</div>
+      </div>
+      <div class="scoreboard">
+        <div class="scoreboard-title">S C O R E</div>
+        <div class="score" id="score-value">0</div>
       </div>
     </div>
-  </div>
-
-  <div class="title-with-scoreboard">
-    <div class="game-names">
-      <div class="game-title">ROCK</div>
-      <div class="game-title">PAPER</div>
-      <div class="game-title">SCISSORS</div>
-      <div class="game-title">LIZARD</div>
-      <div class="game-title">SPOCK</div>
-    </div>
-    <div class="scoreboard">
-      <div class="scoreboard-title">S C O R E</div>
-      <div class="score" id="score-value">0</div>
-    </div>
-  </div>
-  
-  <div id="page-1">
-    <div class="five-icons-container">
     
-    <div class="row-1">
-      <button class="icon-with-image" id="scissors-div" onclick="setDiv(0)">
-        <div class="image-icon">
-        <img src="./images/icon-scissors.svg" class="icon-mobile"alt="">
-        </div>
-      </button>
-    </div>
-
-    <div class="row-2">
-
-      <button class="icon-with-image" id="spock-div" onclick="setDiv(1)">
-        <div class="image-icon">
-        <img src="./images/icon-spock.svg" class="icon-mobile" alt="">
-        </div>
-      </button>
-
-      <button class="icon-with-image" id="paper-div" onclick="setDiv(2)">
-        <div class="image-icon">
-        <img src="./images/icon-paper.svg" class="icon-mobile" alt="">
-        </div>
-      </button>
+    <div id="page-1">
+      <div class="five-icons-container">
       
+      <div class="row-1">
+        <button class="icon-with-image" id="scissors-div" onclick="setDiv(0)">
+          <div class="image-icon">
+          <img src="./images/icon-scissors.svg" class="icon-mobile"alt="">
+          </div>
+        </button>
+      </div>
+
+      <div class="row-2">
+
+        <button class="icon-with-image" id="spock-div" onclick="setDiv(1)">
+          <div class="image-icon">
+          <img src="./images/icon-spock.svg" class="icon-mobile" alt="">
+          </div>
+        </button>
+
+        <button class="icon-with-image" id="paper-div" onclick="setDiv(2)">
+          <div class="image-icon">
+          <img src="./images/icon-paper.svg" class="icon-mobile" alt="">
+          </div>
+        </button>
+        
+      </div>
+      
+      <div class="row-3">
+        <button class="icon-with-image" id="lizard-div" onclick="setDiv(3)">
+          <div class="image-icon">
+          <img src="./images/icon-lizard.svg" class="icon-mobile" alt="">
+          </div>
+        </button>
+
+        <button class="icon-with-image" id="rock-div" onclick="setDiv(4)">
+          <div class="image-icon">
+          <img src="./images/icon-rock.svg" class="icon-mobile" alt="">
+          </div>
+        </button>
+
+      </div>
+
+      </div>
     </div>
     
-    <div class="row-3">
-      <button class="icon-with-image" id="lizard-div" onclick="setDiv(3)">
-        <div class="image-icon">
-        <img src="./images/icon-lizard.svg" class="icon-mobile" alt="">
-        </div>
-      </button>
+    <div id="page-2">
+      <div class="result-page">
 
-      <button class="icon-with-image" id="rock-div" onclick="setDiv(4)">
-        <div class="image-icon">
-        <img src="./images/icon-rock.svg" class="icon-mobile" alt="">
-        </div>
-      </button>
-
-    </div>
-
-    </div>
-  </div>
-  
-  <div id="page-2">
-    <div class="result-page">
-
-      <div id="your-result-heading-with-icon">
-        <div class="result-heading">YOU PICKED</div>
-        
-        <div class="icon-here" id="your-chosen-icon-here">
+        <div id="your-result-heading-with-icon">
+          <div class="result-heading">YOU PICKED</div>
           
-          <div class="result-icon-container" id="rock-icon-page-2-container">
-            <div class="result-icon" id="page-2-rock-icon"> 
-              <div class="result-inside-icon">
-                <img src="./images/icon-rock.svg" alt="">
-            </div>
-            </div>
-          </div>
-          
-          <div class="result-icon-container" id="paper-icon-page-2-container">
-            <div class="result-icon" id="page-2-paper-icon">
-              <div class="result-inside-icon">
-                <img src="./images/icon-paper.svg" alt="">
-            </div>
-            </div>
-          </div>
-
-          <div class="result-icon-container" id="scissors-icon-page-2-container">
-            <div class="result-icon" id="page-2-scissors-icon">
-              <div class="result-inside-icon">
-                <img src="./images/icon-scissors.svg" alt="">
-            </div>
-            </div>
-          </div>
-
-          <div class="result-icon-container" id="spock-icon-page-2-container">
-            <div class="result-icon" id="page-2-spock-icon">
-              <div class="result-inside-icon">
-                <img src="./images/icon-spock.svg" alt="">
-              </div>
-            </div>
-          </div>
-
-          <div class="result-icon-container" id="lizard-icon-page-2-container">
-            <div class="result-icon" id="page-2-lizard-icon">
-              <div class="result-inside-icon">
-                <img src="./images/icon-lizard.svg" alt="">
-              </div>
-            </div>
-          </div>
-
-         </div>
-
-      </div>
-
-      <div id="lose-or-win">
-          <div id="lose-or-win-text">YOU LOST</div>
-          <button id="play-again" onclick="playAgain()">PLAY AGAIN</button>
-      </div>
-
-      <div id="computer-result-heading-with-icon">
-          <div class="result-heading">THE HOUSE PICKED</div>
-          
-          <div class="icon-here" id="computer-chosen-icon-here">
-
-            <div class="result-icon-container" id="rock-icon-page-2-container-computer">
+          <div class="icon-here" id="your-chosen-icon-here">
+            
+            <div class="result-icon-container" id="rock-icon-page-2-container">
               <div class="result-icon" id="page-2-rock-icon"> 
                 <div class="result-inside-icon">
                   <img src="./images/icon-rock.svg" alt="">
@@ -151,7 +99,7 @@
               </div>
             </div>
             
-            <div class="result-icon-container" id="paper-icon-page-2-container-computer">
+            <div class="result-icon-container" id="paper-icon-page-2-container">
               <div class="result-icon" id="page-2-paper-icon">
                 <div class="result-inside-icon">
                   <img src="./images/icon-paper.svg" alt="">
@@ -159,7 +107,7 @@
               </div>
             </div>
 
-            <div class="result-icon-container" id="scissors-icon-page-2-container-computer">
+            <div class="result-icon-container" id="scissors-icon-page-2-container">
               <div class="result-icon" id="page-2-scissors-icon">
                 <div class="result-inside-icon">
                   <img src="./images/icon-scissors.svg" alt="">
@@ -167,7 +115,7 @@
               </div>
             </div>
 
-            <div class="result-icon-container" id="spock-icon-page-2-container-computer">
+            <div class="result-icon-container" id="spock-icon-page-2-container">
               <div class="result-icon" id="page-2-spock-icon">
                 <div class="result-inside-icon">
                   <img src="./images/icon-spock.svg" alt="">
@@ -175,27 +123,84 @@
               </div>
             </div>
 
-            <div class="result-icon-container" id="lizard-icon-page-2-container-computer">
+            <div class="result-icon-container" id="lizard-icon-page-2-container">
               <div class="result-icon" id="page-2-lizard-icon">
                 <div class="result-inside-icon">
                   <img src="./images/icon-lizard.svg" alt="">
                 </div>
               </div>
             </div>
-            
+
           </div>
+
+        </div>
+
+        <div id="lose-or-win">
+            <div id="lose-or-win-text">YOU LOST</div>
+            <button id="play-again" onclick="playAgain()">PLAY AGAIN</button>
+        </div>
+
+        <div id="computer-result-heading-with-icon">
+            <div class="result-heading">THE HOUSE PICKED</div>
+            
+            <div class="icon-here" id="computer-chosen-icon-here">
+
+              <div class="result-icon-container" id="rock-icon-page-2-container-computer">
+                <div class="result-icon" id="page-2-rock-icon"> 
+                  <div class="result-inside-icon">
+                    <img src="./images/icon-rock.svg" alt="">
+                </div>
+                </div>
+              </div>
+              
+              <div class="result-icon-container" id="paper-icon-page-2-container-computer">
+                <div class="result-icon" id="page-2-paper-icon">
+                  <div class="result-inside-icon">
+                    <img src="./images/icon-paper.svg" alt="">
+                </div>
+                </div>
+              </div>
+
+              <div class="result-icon-container" id="scissors-icon-page-2-container-computer">
+                <div class="result-icon" id="page-2-scissors-icon">
+                  <div class="result-inside-icon">
+                    <img src="./images/icon-scissors.svg" alt="">
+                </div>
+                </div>
+              </div>
+
+              <div class="result-icon-container" id="spock-icon-page-2-container-computer">
+                <div class="result-icon" id="page-2-spock-icon">
+                  <div class="result-inside-icon">
+                    <img src="./images/icon-spock.svg" alt="">
+                  </div>
+                </div>
+              </div>
+
+              <div class="result-icon-container" id="lizard-icon-page-2-container-computer">
+                <div class="result-icon" id="page-2-lizard-icon">
+                  <div class="result-inside-icon">
+                    <img src="./images/icon-lizard.svg" alt="">
+                  </div>
+                </div>
+              </div>
+              
+            </div>
+        </div>
+
       </div>
-
     </div>
-  </div>
 
-  <div class="rules-button">
-    <button id="display-rules-button">RULES</button>
-  </div>
-  
-  <div class="attribution">
-  Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>
-  </div>
+    <div class="rules-button">
+      <button id="display-rules-button">RULES</button>
+    </div>
+  </section>
+  <footer>
+    <div class="attribution">
+    Challenge by <nav><a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a></nav>
+    </div>
+  </footer>
+</main>
 </body>
 <script src="script.js"></script>
 </html>
