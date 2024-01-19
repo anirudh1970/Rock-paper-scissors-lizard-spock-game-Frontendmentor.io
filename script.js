@@ -29,7 +29,7 @@ function getCookieValue(cookieName){
 var page1=document.getElementById('page-1');
 var page2=document.getElementById('page-2');
 
-document.getElementById('score-value').innerText=getCookieValue("score");
+document.getElementById('score-value').innerText=(getCookieValue("score")==="")?0:getCookieValue("score");
 var r_p_s_user=-1,r_p_s_computer=-1,score=document.getElementById('score-value').innerText;
 const choices=[0,1,2,3,4];
 function setDiv(val){
