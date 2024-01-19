@@ -21,16 +21,19 @@ document.addEventListener("DOMContentLoaded",function(){
 });
 function getCookieValue(cookieName){
     var name=cookieName+"=";
+
     var decodedCookie=decodeURIComponent(document.cookie);
     var cookieArray=decodedCookie.split("=");
-    
-    return cookieArray[1];
+    if(cookieArray[0]==='score')
+        return cookieArray[1];
+    return 0;
 }
 var page1=document.getElementById('page-1');
 var page2=document.getElementById('page-2');
 
-document.getElementById('score-value').innerText=(getCookieValue("score")==="")?0:getCookieValue("score");
-var r_p_s_user=-1,r_p_s_computer=-1,score=document.getElementById('score-value').innerText;
+
+var r_p_s_user=-1,r_p_s_computer=-1,score=getCookieValue("score");
+document.getElementById('score-value').innerText=score;
 const choices=[0,1,2,3,4];
 function setDiv(val){
     r_p_s_user=val;
@@ -252,7 +255,6 @@ function decideWINORLOSE(v1,v2){
     }
     if(tie){
         txt.innerText='TIE';
-        score+=0;
     }
     else if(win){
         txt.innerText='YOU WIN';
